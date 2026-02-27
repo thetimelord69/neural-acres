@@ -3,249 +3,357 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neural Acres Bio Systems | Core Sync</title>
+<title>Neural Acres Bio Systems</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body, html {
+
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #010409;
-    color: #ffffff;
-    font-family: 'Source Code Pro', monospace;
-    overflow: hidden;
-}
-
-/* ---------------- LOADING SCREEN ---------------- */
-
-#loading-screen {
-    position: fixed;
-    width: 100%;
-    height: 100%;
     background: #010409;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 9999;
-    transition: opacity 1.2s ease;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
-.loading-logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 6px;
-    color: #00ffff;
-    margin-bottom: 30px;
-    animation: pulseText 2s infinite;
-}
-
-@keyframes pulseText {
-    0% { opacity: 0.4; }
-    50% { opacity: 1; }
-    100% { opacity: 0.4; }
-}
-
-.loading-bar {
-    width: 200px;
-    height: 2px;
-    background: rgba(0,255,255,0.2);
-    overflow: hidden;
-    position: relative;
-}
-
-.loading-bar::before {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    background: #39ff14;
-    animation: loadMove 2s linear infinite;
-}
-
-@keyframes loadMove {
-    0% { left: -40%; }
-    100% { left: 100%; }
-}
-
-/* ---------------- MAIN CONTENT ---------------- */
-
+/* BACKGROUND */
 #bg-canvas {
     position: fixed;
-    top: 0; left: 0;
-    z-index: -1;
-    opacity: 0.2;
+    top:0;
+    left:0;
+    z-index:-1;
 }
 
-#mainframe {
+/* NAVBAR */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 1000;
+}
+
+/* LOGO (2.5x SCALE) */
+.logo img {
+    height: 140px;
+}
+
+/* NAV LINKS (SHIFTED LEFT FIX) */
+.nav-links {
+    display: flex;
+    gap: 22px;
+    margin-right: 40px; /* pushes it away from edge */
+}
+
+.nav-links a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* MOBILE */
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    color: #00ffff;
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        position: absolute;
+        top: 110px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        width: 220px;
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    padding-top: 140px;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 1.5s ease;
 }
 
-/* Logo */
-.main-logo {
-    width: 450px;
-    max-width: 80vw;
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.4));
-    animation: logoReveal 2s ease forwards;
-}
-
-@keyframes logoReveal {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-/* Sync Ring */
-.sync-ring {
-    width: 60px;
-    height: 60px;
-    border: 3px solid rgba(0, 255, 255, 0.1);
-    border-top: 3px solid #39ff14;
-    border-right: 3px solid #00ffff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 25px 0 15px 0;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-.status-header {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.7rem;
+.hero h1 {
+    font-size: 3rem;
     color: #00ffff;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    font-family: 'Orbitron';
 }
 
-/* Terminal */
-.terminal-window {
-    height: 120px;
-    width: 450px;
-    max-width: 90vw;
-    overflow: hidden;
-    border-top: 1px solid rgba(57, 255, 20, 0.2);
-    position: relative;
-    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+.hero p {
+    max-width: 700px;
+    opacity: 0.8;
 }
 
-.data-stream {
-    font-size: 0.75rem;
-    color: #39ff14;
-    line-height: 2;
-    position: absolute;
-    width: 100%;
-    animation: scrollInfinite 12s linear infinite;
+/* BUTTON */
+.btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    text-decoration: none;
 }
 
-@keyframes scrollInfinite {
-    0% { top: 0; }
-    100% { top: -320px; }
+.btn:hover {
+    background: #00ffff;
+    color: black;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid rgba(0,255,255,0.2);
+    padding: 25px;
+    width: 260px;
+    background: rgba(0,0,0,0.5);
+}
+
+/* CONTACT */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    background: black;
+    border: 1px solid #00ffff;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    background: #00ffff;
+    border: none;
+}
+
+.success {
+    display: none;
+    color: #00ff88;
+    margin-top: 20px;
 }
 
 </style>
 </head>
-<body>
 
-<!-- Loading Screen -->
-<div id="loading-screen">
-    <div class="loading-logo">NEURAL ACRES INITIALIZING</div>
-    <div class="loading-bar"></div>
-</div>
+<body>
 
 <canvas id="bg-canvas"></canvas>
 
-<div id="mainframe">
-    <!-- LOCAL LOGO FILE -->
-    <img src="logo.jpeg" class="main-logo" alt="Neural Acres Logo">
-
-    <div class="sync-ring"></div>
-    <div class="status-header">CORE_SYNC_ACTIVE</div>
-
-    <div class="terminal-window">
-        <div class="data-stream">
-            [SYSTEM] INITIALIZING NEURAL_ROOTS...<br>
-            [BIO] ANALYZING SOIL_DATA_04...<br>
-            [LINK] SATELLITE HANDSHAKE: OK<br>
-            [SYNC] CALIBRATING PHOTO-SYNTH ARRAYS...<br>
-            [DATA] ENCRYPTING FIELD_METRICS...<br>
-            [AI] GROWTH MODEL GENERATED...<br>
-            [ENV] pH LEVELS STABILIZED...<br>
-            [SYSTEM] REFRESHING SENSORS...<br>
-            [LOG] BUFFERING NODE_TRANSFERS...<br>
-            [READY] WAITING FOR UPLINK...<br>
-            [SYSTEM] INITIALIZING NEURAL_ROOTS...<br>
-            [BIO] ANALYZING SOIL_DATA_04...<br>
-            [LINK] SATELLITE HANDSHAKE: OK<br>
-            [SYNC] CALIBRATING PHOTO-SYNTH ARRAYS...<br>
-            [DATA] ENCRYPTING FIELD_METRICS...<br>
-            [AI] GROWTH MODEL GENERATED...<br>
-            [ENV] pH LEVELS STABILIZED...<br>
-            [SYSTEM] REFRESHING SENSORS...<br>
-            [LOG] BUFFERING NODE_TRANSFERS...<br>
-            [READY] WAITING FOR UPLINK...<br>
-        </div>
+<nav>
+    <div class="logo">
+        <img src="logo.jpeg">
     </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#platform">Platform</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#scale">Scale</a>
+        <a href="#why">Why Now</a>
+        <a href="#founder">Founders</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Biological Manufacturing.<br>Engineered for Precision.</h1>
+    <p>
+        Neural Acres is building an AI-driven biological manufacturing platform 
+        for high-value crops in controlled environments.
+    </p>
+    <a href="#contact" class="btn">Request Access</a>
 </div>
+
+<!-- PLATFORM -->
+<section id="platform">
+    <h2>Core Platform</h2>
+    <div class="grid">
+        <div class="card"><h3>Edge Intelligence</h3><p>Real-time monitoring and anomaly detection.</p></div>
+        <div class="card"><h3>Autonomous Control</h3><p>Closed-loop environmental orchestration.</p></div>
+        <div class="card"><h3>Industrial Infrastructure</h3><p>Scalable continuous production systems.</p></div>
+    </div>
+</section>
+
+<!-- STRATEGY -->
+<section id="strategy">
+    <h2>Crop Strategy</h2>
+    <div class="grid">
+        <div class="card"><h3>Cordyceps</h3><p>High-frequency cash engine.</p></div>
+        <div class="card"><h3>Grade-I Saffron</h3><p>Premium export asset.</p></div>
+        <div class="card"><h3>Expansion</h3><p>Wasabi & advanced botanicals.</p></div>
+    </div>
+</section>
+
+<!-- SCALE -->
+<section id="scale">
+    <h2>Scaling Strategy</h2>
+    <div class="grid">
+        <div class="card"><h3>Phase I</h3><p>2 Bio Pods (Cordyceps + Saffron)</p></div>
+        <div class="card"><h3>Phase II</h3><p>4 Bio Pods (Month 12 expansion)</p></div>
+        <div class="card"><h3>Phase III</h3><p>12 Bio Pods + Central Spine Infrastructure</p></div>
+        <div class="card"><h3>Phase IV</h3><p>60 Bio Pods (48 Production + 12 R&D Facility)</p></div>
+        <div class="card"><h3>Phase V</h3><p>National Expansion (Bangalore & Gurgaon)</p></div>
+    </div>
+</section>
+
+<!-- WHY NOW -->
+<section id="why">
+    <h2>Why Now</h2>
+    <div class="grid">
+        <div class="card"><h3>Climate Volatility</h3><p>Traditional agriculture is unstable.</p></div>
+        <div class="card"><h3>Premium Demand</h3><p>Global markets demand high-purity crops.</p></div>
+        <div class="card"><h3>AI Maturity</h3><p>Automation is now viable at scale.</p></div>
+        <div class="card"><h3>Supply Chain Shift</h3><p>Localised production is critical.</p></div>
+    </div>
+</section>
+
+<!-- FOUNDERS -->
+<section id="founder">
+    <h2>Founding Team</h2>
+    <p style="max-width:700px;margin:auto;">
+        Founded by two IIT Madras alumni, Neural Acres combines deep engineering 
+        expertise with execution-focused strategy to build scalable biological 
+        manufacturing systems for global markets.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Secure Contact</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST" onsubmit="sendForm(event)">
+        <input type="hidden" name="access_key" value="4348efc9-59c0-49d6-9ac7-8b01e7ab9497">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message"></textarea>
+        <button>Transmit</button>
+    </form>
+
+    <div class="success" id="successMsg">
+        Transmission Successful<br><br>
+        <a href="#" class="btn">Return Home</a>
+    </div>
+</section>
 
 <script>
 
-/* Loading Transition */
-setTimeout(() => {
-    document.getElementById("loading-screen").style.opacity = "0";
-    setTimeout(() => {
-        document.getElementById("loading-screen").style.display = "none";
-        const main = document.getElementById("mainframe");
-        main.style.opacity = "1";
-        main.style.transform = "translateY(0)";
-        document.body.style.overflow = "auto";
-    }, 1200);
-}, 3000);
-
-/* Particle Background */
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-
-function init() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    particles = [];
-    for(let i=0; i<50; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            speed: Math.random() * 0.5 + 0.2,
-            size: Math.random() * 1.5
-        });
-    }
+/* MENU */
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
 }
 
-function draw() {
-    ctx.clearRect(0,0,canvas.width, canvas.height);
-    ctx.fillStyle = '#00ffff';
-    particles.forEach(p => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
-        ctx.fill();
-        p.y -= p.speed;
-        if(p.y < 0) p.y = canvas.height;
+/* FORM */
+function sendForm(e){
+    e.preventDefault();
+    const form = e.target;
+
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+    }).then(()=>{
+        form.style.display="none";
+        document.getElementById("successMsg").style.display="block";
     });
+}
+
+/* NEURAL BACKGROUND */
+const canvas = document.getElementById("bg-canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<60;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        vx:(Math.random()-0.5)*0.5,
+        vy:(Math.random()-0.5)*0.5
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+        p.x+=p.vx;
+        p.y+=p.vy;
+
+        if(p.x<0||p.x>canvas.width)p.vx*=-1;
+        if(p.y<0||p.y>canvas.height)p.vy*=-1;
+
+        ctx.fillStyle="#00ffff";
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,2,0,Math.PI*2);
+        ctx.fill();
+    });
+
+    for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+            let dx=particles[i].x-particles[j].x;
+            let dy=particles[i].y-particles[j].y;
+            let dist=Math.sqrt(dx*dx+dy*dy);
+
+            if(dist<120){
+                ctx.strokeStyle="rgba(0,255,255,0.1)";
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x,particles[i].y);
+                ctx.lineTo(particles[j].x,particles[j].y);
+                ctx.stroke();
+            }
+        }
+    }
+
     requestAnimationFrame(draw);
 }
 
-window.addEventListener('resize', init);
-init();
 draw();
 
 </script>
