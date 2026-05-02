@@ -227,6 +227,8 @@ section{position:relative;z-index:1}
 /* ── PHASES ─────────────────────────────────────────────── */
 #roadmap{background:linear-gradient(180deg,var(--g1) 0%,var(--g2) 100%)}
 .phases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.phases-grid .phase-card:nth-child(4),.phases-grid .phase-card:nth-child(5){grid-column:span 1}
+@media(min-width:1100px){.phases-grid{grid-template-columns:repeat(3,1fr)}.phases-grid .phase-card:nth-child(4){grid-column:1/span 1}.phases-grid .phase-card:nth-child(5){grid-column:2/span 1}}
 .phase-card{padding:2.5rem;position:relative;overflow:hidden;cursor:default}
 .phase-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:3px;
@@ -450,7 +452,8 @@ footer{
     <li><a href="#metera">Metera AI</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#cordyceps">Phase 1</a></li>
-    <li><a href="#aquaculture">Aquaculture</a></li>
+    <li><a href="#phase4">Phase 4</a></li>
+    <li><a href="#aquaculture">Phase 5</a></li>
     <li><a href="#funding">Investment</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Partner With Us</a>
@@ -562,7 +565,7 @@ footer{
           </div>
           <div class="glass hex-card">
             <span class="hex-icon">🌊</span>
-            <span class="hex-label">Phase 3</span>
+            <span class="hex-label">Phase 5</span>
             <span class="hex-value">Aquaculture</span>
           </div>
         </div>
@@ -673,37 +676,67 @@ footer{
       <div class="glass phase-card featured reveal">
         <span class="phase-num">Phase 1 · Now</span>
         <div class="phase-title">Cordyceps Militaris</div>
-        <span class="phase-timeline">Year 1–2 · Kerala, India</span>
-        <p class="phase-desc">The proof-of-concept that validates the entire platform. A 20,000-jar controlled biomanufacturing facility demonstrating that Metera AI can consistently produce pharmaceutical-grade output where manual operators cannot.</p>
+        <span class="phase-timeline">Year 1–2 · Kerala, India · 4,000 sq ft</span>
+        <p class="phase-desc">The proof-of-concept engine. A 20,000-jar pilot biomanufacturing facility demonstrating that Metera AI consistently produces pharmaceutical-grade output — in yield, purity, and bioactive content — where manual operators cannot. Target: ~720 kg dried premium biomass per year.</p>
         <div class="phase-crops">
           <span class="crop-tag">Cordyceps militaris</span>
-          <span class="crop-tag">Lab Certified</span>
-          <span class="crop-tag">B2B Supply</span>
+          <span class="crop-tag">Lab Certified CoA</span>
+          <span class="crop-tag">B2B Premium Supply</span>
+          <span class="crop-tag">~₹1 Cr CapEx</span>
         </div>
       </div>
       <div class="glass phase-card reveal">
-        <span class="phase-num">Phase 2 · Botanical</span>
-        <div class="phase-title">Premium Botanicals</div>
-        <span class="phase-timeline">Year 2–5 · Expanded Facility</span>
-        <p class="phase-desc">The world's most geographically constrained crops, freed from their geography. Saffron grows only in Kashmir and Iran — until Metera replicates those exact conditions year-round.</p>
+        <span class="phase-num">Phase 2 · Export Scale-Up</span>
+        <div class="phase-title">Fungal Expansion + Lion's Mane</div>
+        <span class="phase-timeline">Year 2–3 · 18,000 sq ft · Self-funded via Phase 1 profits</span>
+        <p class="phase-desc">Scale the Cordyceps operation to 100,000 jars and introduce Lion's Mane for its distinct nutraceutical profile. Achieve ISO 22000 compliance for EU export. The fungal backbone becomes the financial fortress — generating the capital to fund every subsequent phase.</p>
+        <div class="phase-crops">
+          <span class="crop-tag">Cordyceps ×80k Jars</span>
+          <span class="crop-tag">Lion's Mane</span>
+          <span class="crop-tag">ISO 22000</span>
+          <span class="crop-tag">EU Export Ready</span>
+          <span class="crop-tag">~₹3.5 Cr CapEx</span>
+        </div>
+      </div>
+      <div class="glass phase-card reveal">
+        <span class="phase-num">Phase 3 · Exotic CEA Matrix</span>
+        <div class="phase-title">Premium Botanical Portfolio</div>
+        <span class="phase-timeline">Year 3–4 · 45,000 sq ft added · Self-funded via Phase 2 profits</span>
+        <p class="phase-desc">The world's most geographically constrained crops, liberated from geography. Six exotic species deployed across precision multi-climate zones — each with shared infrastructure to slash per-crop overhead. Wasabi uses Saffron's chilled return water; Black Ginger thrives under Aji Charapita's canopy.</p>
         <div class="phase-crops">
           <span class="crop-tag">Saffron</span>
           <span class="crop-tag">Wasabi</span>
-          <span class="crop-tag">Vanilla</span>
           <span class="crop-tag">Aji Charapita</span>
+          <span class="crop-tag">Black Ginger</span>
           <span class="crop-tag">Panax Ginseng</span>
+          <span class="crop-tag">Rhodiola Rosea</span>
+          <span class="crop-tag">~₹14.5 Cr CapEx</span>
         </div>
       </div>
       <div class="glass phase-card reveal">
-        <span class="phase-num">Phase 3 · Aquaculture</span>
-        <div class="phase-title">Precision RAS</div>
-        <span class="phase-timeline">Year 5–8 · Dedicated Facility</span>
-        <p class="phase-desc">Land-based Recirculating Aquaculture Systems mimicking natural ocean and river habitats. Metera AI extended to dissolved oxygen, salinity, tidal flow, and pH management.</p>
+        <span class="phase-num">Phase 4 · Global Extraction Hub</span>
+        <div class="phase-title">Production Scale-Up + Switzerland Extraction Lab</div>
+        <span class="phase-timeline">Year 5–6 · Kerala Mega-Facility + Zürich / Basel, Switzerland</span>
+        <p class="phase-desc">Massively expand production capacity across all Phase 3 crops, then capture the highest-margin position in the value chain: pharmaceutical-grade extraction and standardisation in Switzerland — the global gold standard for botanical actives. European buyers pay a significant premium for EU-soil-processed, Swiss-certified extracts versus raw biomass. The Malta entity routes extract revenues at ~5% effective tax.</p>
+        <div class="phase-crops">
+          <span class="crop-tag">All Phase 3 Crops ×Scaled</span>
+          <span class="crop-tag">Swiss GMP Extraction Lab</span>
+          <span class="crop-tag">Pharma-Grade Extracts</span>
+          <span class="crop-tag">EU Market Direct Access</span>
+          <span class="crop-tag">Malta Tax Architecture</span>
+        </div>
+      </div>
+      <div class="glass phase-card reveal">
+        <span class="phase-num">Phase 5 · Precision Aquaculture</span>
+        <div class="phase-title">RAS Ocean-to-Table</div>
+        <span class="phase-timeline">Year 7–10 · Dedicated RAS Facility</span>
+        <p class="phase-desc">Land-based Recirculating Aquaculture Systems recreating precise ocean and river conditions inside sealed, AI-controlled industrial tanks. Wild fish stocks are in terminal decline globally. Neural Acres enters as the scalable technology solution — the same Metera AI core extended to a new sensor domain.</p>
         <div class="phase-crops">
           <span class="crop-tag">Atlantic Salmon</span>
           <span class="crop-tag">Beluga Caviar</span>
           <span class="crop-tag">Spiny Lobster</span>
           <span class="crop-tag">Blue Crab</span>
+          <span class="crop-tag">MPEDA + ASC Certified</span>
         </div>
       </div>
     </div>
@@ -856,14 +889,95 @@ footer{
   </div>
 </section>
 
+<!-- ── PHASE 4 SWITZERLAND ─────────────────────────────────── -->
+<section id="phase4">
+  <div class="section-inner">
+    <div class="section-label reveal">Phase 4 · Year 5–6</div>
+    <h2 class="section-title reveal">Switzerland.<br><em>The extraction frontier.</em></h2>
+    <div class="cordyceps-split">
+      <div class="reveal">
+        <p class="section-body" style="margin-bottom:2rem;">Phase 4 executes on two parallel objectives. First, a major production scale-up across all Phase 3 crops — maximising raw biomass output from the Kerala mega-facility at full 67,000 sq ft capacity. Second, and strategically decisive: establishing a pharmaceutical-grade extraction and standardisation laboratory in Switzerland.</p>
+        <p class="section-body" style="margin-bottom:2rem;">Switzerland is the global gold standard for botanical extract processing. Swiss GMP certification unlocks the most demanding European pharmaceutical, cosmetic, and nutraceutical buyers — buyers who will not source from non-EU-processed material regardless of raw biomass quality. The Swiss lab transforms Neural Acres from a raw biomass supplier into a vertically integrated extract manufacturer commanding 3–5× the per-kilogram revenue of dried biomass.</p>
+        <p class="section-body">The Malta holding entity routes Swiss extraction revenues at ~5% effective corporate tax, while Metera AI's intellectual property — held at Malta level — generates royalty income that further reduces Indian taxable income. The full cross-border architecture fires simultaneously at Phase 4.</p>
+      </div>
+      <div class="reveal">
+        <div class="specs-list glass">
+          <div class="spec-row">
+            <span class="spec-key">Phase 4 Kerala Scale</span>
+            <span class="spec-val">Full 67,000 sq ft · All Phase 3 crops</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Swiss Lab Location</span>
+            <span class="spec-val">Zürich / Basel corridor</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Certification Target</span>
+            <span class="spec-val">Swiss GMP + EU Pharmacopoeia</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Extraction Formats</span>
+            <span class="spec-val">Standardised botanical extracts, spray-dried powders, tinctures</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Revenue Uplift</span>
+            <span class="spec-val">3–5× vs. raw dried biomass</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Target Buyers</span>
+            <span class="spec-val">EU Pharma, Swiss cosmetics, German herbal medicine</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">Tax Architecture</span>
+            <span class="spec-val">Malta entity · ~5% effective rate</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-key">IP Strategy</span>
+            <span class="spec-val">Metera AI IP held at Malta · Royalties to India</span>
+          </div>
+        </div>
+        <div class="glass" style="margin-top:1.5rem;padding:2rem;border-left:2px solid var(--gold);">
+          <div class="section-label" style="margin-bottom:.8rem;">The Value Chain Capture</div>
+          <p style="font-size:.87rem;line-height:1.65;color:var(--muted);">Neural Acres produces the raw material in Kerala. The Malta entity purchases it at Cost + 15%. The Swiss lab processes it into certified extracts. The final product — Swiss GMP, EU-compliant botanical extract — ships directly to European pharmaceutical buyers at 3–5× the price of the input biomass. The entire margin spread is captured within the Neural Acres group structure.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;">
+      <div class="glass param-card reveal" style="text-align:center;">
+        <span class="param-icon">🌿</span>
+        <span class="param-name">Saffron Extract</span>
+        <span class="param-val" style="font-size:.85rem;">Safranal + Crocin standardised</span>
+        <p class="param-desc">Pharmaceutical and cosmetic-grade; EU buyers pay premium for Swiss-processed Indian saffron with verifiable origin chain.</p>
+      </div>
+      <div class="glass param-card reveal" style="text-align:center;">
+        <span class="param-icon">🍄</span>
+        <span class="param-name">Cordyceps Extract</span>
+        <span class="param-val" style="font-size:.85rem;">Cordycepin-standardised powder</span>
+        <p class="param-desc">Swiss GMP extract from AI-cultivated Kerala biomass; highest verified cordycepin content available in Europe.</p>
+      </div>
+      <div class="glass param-card reveal" style="text-align:center;">
+        <span class="param-icon">🌱</span>
+        <span class="param-name">Ginseng &amp; Rhodiola</span>
+        <span class="param-val" style="font-size:.85rem;">Ginsenoside + Rosavin standardised</span>
+        <p class="param-desc">Adaptogen extracts for EU nutraceutical and traditional herbal medicine markets. Swiss certification removes all import friction.</p>
+      </div>
+      <div class="glass param-card reveal" style="text-align:center;">
+        <span class="param-icon">🫚</span>
+        <span class="param-name">Black Ginger</span>
+        <span class="param-val" style="font-size:.85rem;">Polymethoxyflavone standardised</span>
+        <p class="param-desc">Emerging sports nutrition and longevity market in Europe. Swiss lab produces the standardised extract format demanded by premium formulators.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── AQUACULTURE ────────────────────────────────────────── -->
 <section id="aquaculture">
   <div class="section-inner">
-    <div class="section-label reveal">Phase 3 · From Year 5</div>
+    <div class="section-label reveal">Phase 5 · From Year 7</div>
     <h2 class="section-title reveal">The ocean,<br><em>on land</em></h2>
     <div class="aqua-grid">
       <div class="reveal">
-        <p class="section-body" style="margin-bottom:2.5rem;">Phase 3 applies the Metera AI architecture to Recirculating Aquaculture Systems — recreating precise ocean and river conditions inside sealed, AI-controlled industrial tanks. Wild fish stocks are in terminal decline globally. Neural Acres enters as the scalable technology solution.</p>
+        <p class="section-body" style="margin-bottom:2.5rem;">Phase 5 applies the battle-tested Metera AI architecture — proven across fungal and botanical biomanufacturing — to Recirculating Aquaculture Systems. By this stage the platform has governed six radically different biological systems. Adding dissolved oxygen, salinity, tidal flow, and pH is a sensor domain extension, not a technology reinvention. Wild fish stocks are in terminal global decline; Neural Acres enters as the vertically integrated technology solution.</p>
         <div class="species-list">
           <div class="glass species-item">
             <span class="species-emoji">🐟</span>
@@ -903,7 +1017,7 @@ footer{
         <div class="aqua-stats">
           <div class="glass aqua-stat">
             <span class="aqua-stat-num">₹250Cr+</span>
-            <span class="aqua-stat-label">Phase 3 Investment Scale</span>
+            <span class="aqua-stat-label">Phase 5 Investment Scale</span>
           </div>
           <div class="glass aqua-stat">
             <span class="aqua-stat-num">4</span>
@@ -1005,12 +1119,17 @@ footer{
       </div>
       <div class="glass capex-total-card reveal">
         <span class="capex-total-label">Total Phase 1 Launch Capital</span>
-        <span class="capex-total-num">~₹90L</span>
+        <span class="capex-total-num">~₹1 Cr</span>
         <span class="capex-total-sub">20,000-Jar Full-Capacity Build</span>
-        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border)">
-          <span class="capex-total-label">Full Vision (Phases 1–3)</span>
-          <span class="capex-total-num" style="font-size:2rem">₹500–800Cr</span>
-          <span class="capex-total-sub">8-Year Complete Buildout</span>
+        <div style="margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--border)">
+          <span class="capex-total-label">Phase 1–3 Kerala Facility</span>
+          <span class="capex-total-num" style="font-size:2rem">~₹19 Cr</span>
+          <span class="capex-total-sub">67,000 sq ft · 8 Premium Crops · Self-funded from Phase 1</span>
+        </div>
+        <div style="margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid var(--border)">
+          <span class="capex-total-label">Full Vision (Phases 1–5)</span>
+          <span class="capex-total-num" style="font-size:2rem">₹560–870Cr</span>
+          <span class="capex-total-sub">10-Year Complete Buildout · Kerala + Switzerland + RAS</span>
         </div>
       </div>
     </div>
