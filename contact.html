@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neural Acres | Contact</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: #010409;
+    color: #39ff14;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal {
+    width: 420px;
+    border: 1px solid #00ffff33;
+    padding: 25px;
+    background: rgba(0,0,0,0.6);
+}
+
+.title {
+    font-family: 'Orbitron';
+    color: #00ffff;
+    text-align: center;
+}
+
+.logs {
+    font-size: 0.8rem;
+    height: 80px;
+    overflow: hidden;
+}
+
+input, textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #00ffff55;
+    color: #39ff14;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00ffff;
+    background: transparent;
+    color: #00ffff;
+}
+
+#success {
+    display: none;
+    text-align: center;
+    font-family: 'Orbitron';
+}
+
+.return-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    text-decoration: none;
+}
+
+#redirect-text {
+    font-size: 0.8rem;
+    color: #00ffff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="terminal">
+    <div class="title">NEURAL ACRES SECURE CHANNEL</div>
+
+    <div class="logs" id="logs">
+        [SYSTEM] Initializing...
+    </div>
+
+    <form id="contact-form">
+        <input type="hidden" name="access_key" value="4348efc9-59c0-49d6-9ac7-8b01e7ab9497">
+
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+
+        <button type="submit">SEND</button>
+    </form>
+
+    <div id="success">
+        TRANSMISSION SUCCESSFUL
+        <div id="redirect-text">
+            Returning in <span id="countdown">5</span>s...
+        </div>
+        <a href="index.html" class="return-btn">RETURN</a>
+    </div>
+</div>
+
+<script>
+const logs = document.getElementById("logs");
+
+function addLog(t){ logs.innerHTML += "<br>"+t; }
+
+setTimeout(()=>addLog("[AUTH] Secure channel..."),500);
+
+document.getElementById("contact-form").addEventListener("submit", async e=>{
+    e.preventDefault();
+
+    addLog("[PROCESS] Sending...");
+    const data = new FormData(e.target);
+
+    await fetch("https://api.web3forms.com/submit", {
+        method:"POST",
+        body:data
+    });
+
+    document.getElementById("contact-form").style.display="none";
+    document.getElementById("success").style.display="block";
+
+    let t=5;
+    const el=document.getElementById("countdown");
+
+    const timer=setInterval(()=>{
+        t--;
+        el.textContent=t;
+        if(t<=0){
+            clearInterval(timer);
+            window.location.href="index.html";
+        }
+    },1000);
+});
+</script>
+
+</body>
+</html>
