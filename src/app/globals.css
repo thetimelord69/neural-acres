@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties (teal/navy brand palette) ── */
+:root {
+  --bg:          #070f1a;
+  --bg2:         #0b1625;
+  --card:        #0f1e30;
+  --card2:       #132438;
+  --teal:        #1de9b6;
+  --teal-dark:   #00c896;
+  --cyan:        #00e5ff;
+  --gold:        #d7b957;
+  --gold-soft:   #f5df8e;
+  --silver:      #c8dde8;
+  --text1:       #edf5ff;
+  --text2:       #8ab4c8;
+  --text3:       #3d6278;
+  --border:      rgba(29, 233, 182, 0.12);
+  --border2:     rgba(29, 233, 182, 0.25);
+  --glow:        rgba(29, 233, 182, 0.20);
+  --glow-strong: rgba(29, 233, 182, 0.38);
+}
+
+/* ── Base ── */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text1);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--teal); }
+
+/* ── Selection ── */
+::selection { background: rgba(29, 233, 182, 0.25); color: var(--text1); }
+
+/* ── Scroll-reveal animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Orb glow background blobs ── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.orb-teal {
+  background: radial-gradient(circle, rgba(29,233,182,0.18), transparent 70%);
+  animation: orbFloat 14s ease-in-out infinite;
+}
+.orb-cyan {
+  background: radial-gradient(circle, rgba(0,229,255,0.12), transparent 70%);
+  animation: orbFloat 18s ease-in-out infinite reverse;
+}
+.orb-dark {
+  background: radial-gradient(circle, rgba(20,55,80,0.3), transparent 70%);
+  animation: orbFloat 22s ease-in-out infinite 4s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-28px) scale(1.04); }
+}
+
+/* ── Grid overlay ── */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(29,233,182,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29,233,182,0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black, transparent);
+  pointer-events: none;
+}
+
+/* ── Badge dot pulse ── */
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(29,233,182,0.6); }
+  50%       { box-shadow: 0 0 0 6px rgba(29,233,182,0); }
+}
+.badge-dot {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+/* ── Counter number style ── */
+.counter-num {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--cyan) 60%, var(--silver) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Teal text gradient ── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--cyan) 55%, var(--silver) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.investor-gradient {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--teal) 55%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section eyebrow label ── */
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+/* ── Card base ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+  border-color: var(--border2);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Animated dashboard live dot ── */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+.live-dot {
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+/* ── Page hero pattern ── */
+.page-hero-pattern {
+  background-image: radial-gradient(rgba(29,233,182,0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── Smooth scrollbar for log ── */
+.log-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border2) transparent;
+}
+
+/* ── Metric bar fill animation ── */
+.bar-fill {
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Input / Textarea focus ring ── */
+.field-focus:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(29,233,182,0.15);
+}

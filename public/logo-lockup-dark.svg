@@ -1,0 +1,43 @@
+<svg width="560" height="160" viewBox="0 0 560 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Neural Acres</title>
+  <desc id="desc">Neural Acres horizontal logo lockup for light backgrounds.</desc>
+  <defs>
+    <linearGradient id="markTeal" x1="20" y1="28" x2="116" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#009E88"/>
+      <stop offset=".58" stop-color="#1DE9B6"/>
+      <stop offset="1" stop-color="#2D5F74"/>
+    </linearGradient>
+    <linearGradient id="markCyan" x1="32" y1="112" x2="116" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#075C5A"/>
+      <stop offset=".55" stop-color="#00C896"/>
+      <stop offset="1" stop-color="#00A7C2"/>
+    </linearGradient>
+    <linearGradient id="markSilver" x1="104" y1="28" x2="128" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132438"/>
+      <stop offset="1" stop-color="#3D6278"/>
+    </linearGradient>
+  </defs>
+
+  <g>
+    <path d="M22 39L46 26L118 74V98L46 52L22 66V39Z" fill="url(#markCyan)"/>
+    <path d="M22 78L46 65L118 111V136L46 91L22 104V78Z" fill="url(#markTeal)"/>
+    <path d="M22 104L46 91V130L22 117V104Z" fill="#132438"/>
+    <path d="M106 26L130 39V117L106 130V26Z" fill="url(#markSilver)"/>
+    <path d="M45.7 65L118 111V136L45.7 91V65Z" fill="#EDF5FF" fill-opacity=".76"/>
+    <path d="M46 52L22 66V78L46 65L118 111V98L46 52Z" fill="#07111D" fill-opacity=".62"/>
+    <path d="M47 115L75 100L91 111L64 126L47 115Z" fill="#0FAF9F" fill-opacity=".9"/>
+    <path d="M84 60V40" stroke="#2D5F74" stroke-width="3.6" stroke-linecap="round"/>
+    <circle cx="84" cy="37" r="5.6" fill="#00C896"/>
+    <path d="M57 98V82" stroke="#2D5F74" stroke-width="3.4" stroke-linecap="round"/>
+    <circle cx="57" cy="79" r="5" fill="#1DE9B6"/>
+    <path d="M89 120L77 111H64" stroke="#00C896" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="96" cy="125" r="4.8" fill="#3D6278"/>
+  </g>
+
+  <g fill="#07111D">
+    <text x="165" y="69" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="13">NEURAL</text>
+    <text x="165" y="113" font-family="Space Grotesk, Inter, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="13">ACRES</text>
+  </g>
+  <circle cx="491" cy="84" r="5.5" stroke="#07111D" stroke-width="1.6"/>
+  <text x="488" y="88" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#07111D">R</text>
+</svg>
