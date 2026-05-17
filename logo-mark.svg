@@ -1,0 +1,42 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Neural Acres mark</title>
+  <desc id="desc">Angular N and A monogram with biotech circuit nodes.</desc>
+  <defs>
+    <linearGradient id="teal" x1="16" y1="16" x2="82" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1DE9B6"/>
+      <stop offset=".58" stop-color="#86F5E3"/>
+      <stop offset="1" stop-color="#C8DDE8"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="24" y1="74" x2="79" y2="17" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B7E78"/>
+      <stop offset=".55" stop-color="#1DE9B6"/>
+      <stop offset="1" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="72" y1="16" x2="82" y2="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#8AB4C8"/>
+    </linearGradient>
+    <filter id="nodeGlow" x="-90%" y="-90%" width="280%" height="280%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path d="M16 21L32 12L80 44V62L32 31L16 40V21Z" fill="url(#cyan)"/>
+  <path d="M16 48L32 39L80 70V88L32 57L16 66V48Z" fill="url(#teal)"/>
+  <path d="M16 66L32 57V84L16 75V66Z" fill="#EAF4FA"/>
+  <path d="M72 12L88 21V75L72 84V12Z" fill="url(#silver)"/>
+  <path d="M31.8 39L80 70V88L31.8 57V39Z" fill="white" fill-opacity=".88"/>
+  <path d="M32 31L16 40V48L32 39L80 70V62L32 31Z" fill="#08131F" fill-opacity=".72"/>
+  <path d="M33 73L51 63L62 70L44 80L33 73Z" fill="#0FAF9F" fill-opacity=".88"/>
+
+  <path d="M57 36V23" stroke="#C8DDE8" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="57" cy="21" r="4" fill="#86F5E3" filter="url(#nodeGlow)"/>
+  <path d="M39 62V52" stroke="#C8DDE8" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="39" cy="50" r="3.6" fill="#1DE9B6" filter="url(#nodeGlow)"/>
+  <path d="M60 76L52 70H43" stroke="#1DE9B6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="79" r="3.4" fill="#8AB4C8"/>
+</svg>
