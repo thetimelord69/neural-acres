@@ -84,7 +84,7 @@ export default function ContactPage() {
               <div className="space-y-3">
                 {[
                   { label: 'Investment Ask',   val: '₹30–50 Lakhs' },
-                  { label: 'Equity Offered',   val: '3%' },
+                  { label: 'Equity Offered',   val: '3.5–5.5%' },
                   { label: 'Demo Unit Status', val: 'Under construction' },
                   { label: 'Phase 1 Revenue',  val: 'INR 174.6L-232.8L/yr' },
                   { label: 'First Revenue',    val: 'Month 3 of Phase 1' },

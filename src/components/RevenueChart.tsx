@@ -56,7 +56,7 @@ export default function RevenueChart() {
         plugins: {
           legend: {
             position: 'top',
-            labels: { color: '#8ab4c8', padding: 14, font: { size: 11, family: 'var(--font-mono)' } },
+            labels: { color: '#8ab4c8', padding: 14, font: { size: 11, family: 'JetBrains Mono, monospace' } },
           },
           tooltip: {
             backgroundColor: '#0f1e30',

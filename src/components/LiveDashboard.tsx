@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 
 const LOG_MESSAGES = [
   'Vision review: crop health nominal ✓',
@@ -35,6 +35,7 @@ export default function LiveDashboard() {
     { time: '14:29:55', msg: 'Climate band stable ✓' },
   ]);
   const [logIdx, setLogIdx] = useState(0);
+  const tickCountRef = useRef(0);
 
   const tick = useCallback(() => {
     const now = new Date();
@@ -49,6 +50,10 @@ export default function LiveDashboard() {
     const entry: LogEntry = { time: now.toLocaleTimeString('en-GB'), msg };
     setLog(prev => [entry, ...prev.slice(0, 3)]);
     setLogIdx(i => i + 1);
+    tickCountRef.current += 1;
+    if (tickCountRef.current % 15 === 0) {
+      setCycleDay(d => Math.min(d + 1, 65));
+    }
   }, [logIdx]);
 
   // Clock every second
@@ -66,7 +71,7 @@ export default function LiveDashboard() {
   }, [tick]);
 
   const rows = [
-    { label: 'Temperature',  val: `${metrics.temp}°C`,   pct: Math.round((parseFloat(metrics.temp) / 24) * 100), warn: false },
+    { label: 'Temperature',  val: `${metrics.temp}°C`,   pct: Math.round((parseFloat(metrics.temp) / 25) * 100), warn: false },
     { label: 'Humidity RH',  val: `${metrics.rh}%`,      pct: Math.round(parseFloat(metrics.rh)),                warn: false },
     { label: 'Air Quality',  val: `${metrics.co2} idx`,  pct: Math.round((parseInt(metrics.co2) / 900) * 100),   warn: parseInt(metrics.co2) > 850 },
     { label: 'Vision Score', val: `${metrics.vision}%`,  pct: Math.round(parseFloat(metrics.vision)),            warn: false },
@@ -108,7 +113,7 @@ export default function LiveDashboard() {
       <div className="px-5 py-4 space-y-0 border-b border-teal-500/8">
         {log.map(({ time, msg }, i) => (
           <div
-            key={i}
+            key={time + msg}
             className={`flex gap-3 text-xs py-2 border-b border-white/4 last:border-0 transition-opacity duration-500 ${
               i === 0 ? 'opacity-100' : 'opacity-60'
             }`}

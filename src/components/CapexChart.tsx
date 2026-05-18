@@ -62,7 +62,7 @@ export default function CapexChart() {
             labels: {
               color: '#8ab4c8',
               padding: 10,
-              font: { size: 11, family: 'var(--font-mono)' },
+              font: { size: 11, family: 'JetBrains Mono, monospace' },
               boxWidth: 12,
               boxHeight: 12,
             },
