@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const proofPoints = [
   { value: 'Under Construction', label: 'Phase 0 demo unit', tone: 'text-gold-400' },
-  { value: 'INR 30-40L', label: 'Seed ask for 3% equity', tone: 'text-teal-400' },
+  { value: 'INR 30-50L', label: 'Seed ask for 3.5-5.5% equity', tone: 'text-teal-400' },
   { value: 'INR 107.9L', label: 'Phase 1 CapEx model', tone: 'text-cyan-400' },
   { value: 'INR 174.6-232.8L', label: 'Annual revenue target', tone: 'text-silver-100' },
 ];
@@ -68,7 +68,7 @@ export default function Home() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-teal-500/25 rounded-full bg-teal-500/6 backdrop-blur-sm mb-5 text-sm text-silver-300 font-medium">
             <span className="badge-dot" />
-            Seeking Seed Investment · ₹30–40 Lakhs · 3% Equity
+            Seeking Seed Investment · ₹30–50 Lakhs · 3.5–5.5% Equity
           </div>
 
           {/* Logo lockup */}
@@ -270,8 +270,8 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="eyebrow mb-4">Seed Round Open</div>
           <h2 className="font-heading font-bold text-4xl md:text-5xl text-silver-100 mb-6">
-            <span className="text-gradient">₹30–40 Lakhs</span><br />
-            for 3% Equity
+            <span className="text-gradient">₹30–50 Lakhs</span><br />
+            for 3.5–5.5% Equity
           </h2>
           <p className="text-silver-300 text-lg leading-relaxed mb-4">
             Phase 0 demo unit is under construction. Phase 1 commercial revenue begins Month 3.

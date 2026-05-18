@@ -5,7 +5,7 @@ import CapexChart from '@/components/CapexChart';
 
 export const metadata: Metadata = {
   title: 'Financials & Investment',
-  description: 'Neural Acres Phase 1 annual revenue scenarios: INR 174.60L (conservative) to INR 232.80L (premium), with INR 107.9L Phase 1 CapEx and a INR 30-40L seed round for 3% equity.',
+  description: 'Neural Acres Phase 1 annual revenue scenarios: INR 174.60L (conservative) to INR 232.80L (premium), with INR 107.9L Phase 1 CapEx and a INR 30-50L seed round for 3.5–5.5% Equity.',
 };
 
 const econCards = [
@@ -28,7 +28,7 @@ const capexBreakdown = [
 ];
 
 const fundingStages = [
-  { stage: 'Stage 1', source: 'Angel Investor', amount: '₹30–40L', detail: '3% equity', color: 'text-teal-400 border-teal-500/30' },
+  { stage: 'Stage 1', source: 'Angel Investor', amount: '₹30–50L', detail: '3.5–5.5% equity', color: 'text-teal-400 border-teal-500/30' },
   { stage: 'Stage 2', source: 'CGTMSE Loan', amount: '₹50–60L', detail: 'Collateral-free government loan', color: 'text-cyan-400 border-cyan-500/25' },
   { stage: 'Stage 3', source: 'BIRAC / KSUM', amount: 'TBD', detail: 'Grant funding post-prototype', color: 'text-silver-400 border-silver-500/20' },
 ];
@@ -132,10 +132,10 @@ export default function FinancialsPage() {
             <div>
               <div className="eyebrow mb-4">Seed Round · Open Now</div>
               <div className="font-heading font-extrabold text-6xl md:text-7xl text-gradient mb-2 leading-none">
-                ₹30–40L
+                ₹30–50L
               </div>
               <div className="text-silver-300 text-xl mb-6">
-                for <span className="text-cyan-400 font-bold">3% equity</span>
+                for <span className="text-cyan-400 font-bold">3.5–5.5% equity</span>
               </div>
               <p className="text-silver-400 text-base leading-relaxed mb-8">
                 Angel capital bridges Phase 0 → Phase 1 alongside a CGTMSE collateral-free

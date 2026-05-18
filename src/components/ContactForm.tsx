@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojypgov';
+const FALLBACK_EMAIL = 'neuralacresofficial@gmail.com';
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -16,25 +17,68 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' },
+        body: JSON.stringify(payload),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
       });
 
       if (!response.ok) {
-        throw new Error('Formspree submission failed');
+        let msg = 'Message could not be sent. Please try again in a moment.';
+        try {
+          const data = await response.json();
+          if (Array.isArray(data?.errors) && data.errors.length > 0) {
+            msg = data.errors.map((x: { message?: string }) => x.message).filter(Boolean).join(' ');
+          } else if (typeof data?.error === 'string' && data.error.trim().length > 0) {
+            msg = data.error;
+          }
+        } catch {
+          // keep default message
+        }
+        throw new Error(msg);
       }
 
       form.reset();
       setSubmitted(true);
-    } catch {
-      setError('Message could not be sent. Please try again in a moment.');
+    } catch (err) {
+      const fallback = 'Message could not be sent. Please try again in a moment.';
+      if (err instanceof Error && err.message.trim().length > 0) {
+        const msg = err.message.trim();
+        if (msg.toLowerCase() === 'failed to fetch') {
+          setError('Network connection blocked the form request. Please refresh and try again, or use a different network/browser.');
+        } else {
+          setError(msg);
+        }
+      } else {
+        setError(fallback);
+      }
     } finally {
       setLoading(false);
     }
+  }
+
+  function handleEmailFallback(e: React.MouseEvent<HTMLAnchorElement>) {
+    const form = e.currentTarget.closest('form');
+    if (!form) return;
+
+    const fd = new FormData(form);
+    const name = String(fd.get('name') || '');
+    const email = String(fd.get('email') || '');
+    const organization = String(fd.get('organization') || '');
+    const interest = String(fd.get('interest') || '');
+    const message = String(fd.get('message') || '');
+
+    const subject = encodeURIComponent('Neural Acres investor inquiry');
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nInterest: ${interest}\n\nMessage:\n${message}`
+    );
+    e.currentTarget.href = `mailto:${FALLBACK_EMAIL}?subject=${subject}&body=${body}`;
   }
 
   if (submitted) {
@@ -65,8 +109,8 @@ export default function ContactForm() {
               type="text"
               required
               placeholder="Your name"
-              className="w-full bg-white/4 border border-teal-500/15 rounded-lg px-4 py-2.5
-                text-silver-100 text-sm placeholder-silver-600
+              className="w-full bg-silver-100 border border-teal-500/20 rounded-lg px-4 py-2.5
+                text-navy-950 text-sm placeholder:text-slate-400
                 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/15
                 transition-all duration-200"
             />
@@ -78,8 +122,8 @@ export default function ContactForm() {
               type="email"
               required
               placeholder="you@example.com"
-              className="w-full bg-white/4 border border-teal-500/15 rounded-lg px-4 py-2.5
-                text-silver-100 text-sm placeholder-silver-600
+              className="w-full bg-silver-100 border border-teal-500/20 rounded-lg px-4 py-2.5
+                text-navy-950 text-sm placeholder:text-slate-400
                 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/15
                 transition-all duration-200"
             />
@@ -92,8 +136,8 @@ export default function ContactForm() {
             name="organization"
             type="text"
             placeholder="Your organization (optional)"
-            className="w-full bg-white/4 border border-teal-500/15 rounded-lg px-4 py-2.5
-              text-silver-100 text-sm placeholder-silver-600
+            className="w-full bg-silver-100 border border-teal-500/20 rounded-lg px-4 py-2.5
+              text-navy-950 text-sm placeholder:text-slate-400
               focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/15
               transition-all duration-200"
           />
@@ -105,7 +149,7 @@ export default function ContactForm() {
             name="interest"
             required
             className="w-full bg-navy-800 border border-teal-500/15 rounded-lg px-4 py-2.5
-              text-silver-300 text-sm
+              text-silver-100 text-sm
               focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/15
               transition-all duration-200 appearance-none cursor-pointer"
           >
@@ -122,18 +166,26 @@ export default function ContactForm() {
           <textarea
             name="message"
             rows={4}
+            required
             placeholder="Any questions or comments..."
-            className="w-full bg-white/4 border border-teal-500/15 rounded-lg px-4 py-2.5
-              text-silver-100 text-sm placeholder-silver-600 resize-none
+            className="w-full bg-silver-100 border border-teal-500/20 rounded-lg px-4 py-2.5
+              text-navy-950 text-sm placeholder:text-slate-400 resize-none
               focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/15
               transition-all duration-200"
           />
         </div>
 
         {error && (
-          <p className="rounded-lg border border-red-400/20 bg-red-400/10 px-4 py-3 text-sm text-red-300">
-            {error}
-          </p>
+          <div className="rounded-lg border border-red-400/20 bg-red-400/10 px-4 py-3 text-sm text-red-300">
+            <p>{error}</p>
+            <a
+              href={`mailto:${FALLBACK_EMAIL}`}
+              onClick={handleEmailFallback}
+              className="mt-2 inline-block text-teal-300 underline underline-offset-4 hover:text-teal-200"
+            >
+              Send via email instead
+            </a>
+          </div>
         )}
 
         <button

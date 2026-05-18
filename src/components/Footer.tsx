@@ -50,8 +50,8 @@ export default function Footer() {
             <div className="font-mono text-[10px] text-teal-500 tracking-widest uppercase mb-4">Investment</div>
             <p className="text-silver-300 text-sm mb-4 leading-relaxed">
               Seeking seed investment of<br />
-              <span className="text-teal-500 font-bold">₹30–40 Lakhs</span> for{' '}
-              <span className="text-cyan-500 font-bold">3% equity</span>.
+              <span className="text-teal-500 font-bold">₹30–50 Lakhs</span> for{' '}
+              <span className="text-cyan-500 font-bold">3.5–5.5% equity</span>.
             </p>
             <Link
               href="/contact"

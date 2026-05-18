@@ -25,7 +25,7 @@ const nextSteps = [
   {
     n: '4',
     title: 'Term Sheet',
-    desc: '₹30–40L seed investment for 3% equity, structured for CGTMSE government loan co-investment compatibility.',
+    desc: '₹30-50L seed investment for 3.5-5.5% equity, structured for CGTMSE government loan co-investment compatibility.',
   },
 ];
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
               <div className="font-mono text-[10px] text-teal-500 tracking-widest uppercase mb-4">Seed Round Summary</div>
               <div className="space-y-3">
                 {[
-                  { label: 'Investment Ask',   val: '₹30–40 Lakhs' },
+                  { label: 'Investment Ask',   val: '₹30–50 Lakhs' },
                   { label: 'Equity Offered',   val: '3%' },
                   { label: 'Demo Unit Status', val: 'Under construction' },
                   { label: 'Phase 1 Revenue',  val: 'INR 174.6L-232.8L/yr' },
