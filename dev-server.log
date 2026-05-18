@@ -1,0 +1,24 @@
+
+> neural-acres-site@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1962ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 10.5s (596 modules)
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 10857ms
+ GET /_next/static/webpack/e31db8087e38c00b.webpack.hot-update.json 404 in 11210ms
+ ✓ Compiled in 798ms (287 modules)
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 261ms
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 46ms
+ GET /_next/static/webpack/e31db8087e38c00b.webpack.hot-update.json 404 in 78ms
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 93ms
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 469ms
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 827ms
+ GET /contact/?_subject=New+Neural+Acres+investor+inquiry&name=hello&email=y%40gmail.com&organization=CFS&interest=Ready+to+invest+%E2%80%94+schedule+a+call&message=Hello 200 in 802ms
+ ○ Compiling / ...
+ ✓ Compiled / in 837ms (556 modules)
+ ✓ Compiled in 1524ms (570 modules)
