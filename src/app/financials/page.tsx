@@ -5,11 +5,11 @@ import CapexChart from '@/components/CapexChart';
 
 export const metadata: Metadata = {
   title: 'Financials & Investment',
-  description: 'Neural Acres Phase 1 annual revenue scenarios: INR 174.60L (conservative) to INR 232.80L (premium), with INR 107.9L Phase 1 CapEx and a INR 30-50L seed round for 3.5–5.5% Equity.',
+  description: 'Neural Acres Phase 1 annual revenue scenarios: INR 174.60L (conservative) to INR 232.80L (premium), with INR 110.90L Phase 1 CapEx and a INR 30-50L seed round for 3.5–5.5% Equity.',
 };
 
 const econCards = [
-  { icon: '🏗️', val: '₹107.9L',    label: 'Total Phase 1 CapEx' },
+  { icon: '🏗️', val: '₹110.90L',   label: 'Total Phase 1 CapEx' },
   { icon: '📅', val: 'Month 3',    label: 'First Revenue (Zone A Harvest)' },
   { icon: '💰', val: 'INR 18-24L/mo',  label: 'Steady-State Monthly Revenue' },
   { icon: '📦', val: '582 kg',    label: 'Annual Pharma-Grade Output' },
@@ -18,13 +18,13 @@ const econCards = [
 ];
 
 const capexBreakdown = [
-  { label: 'Facility envelope & compliance', amount: '₹20.10L', pct: 19 },
-  { label: 'Climate control (dual HVAC + TFA)', amount: '₹24.55L', pct: 23 },
+  { label: 'Facility envelope & compliance', amount: '₹20.10L', pct: 18 },
+  { label: 'Climate control (dual HVAC + TFA)', amount: '₹24.55L', pct: 22 },
   { label: 'Sterilization & autoclave machinery', amount: '₹9.70L', pct: 9 },
-  { label: 'Production hardware & post-harvest', amount: '₹12.45L', pct: 12 },
+  { label: 'Production hardware & post-harvest', amount: '₹12.45L', pct: 11 },
   { label: 'Genetics lab & substrate (Cycle 1)', amount: '₹8.90L', pct: 8 },
-  { label: 'AI, compute, sensing & power', amount: '₹16.20L', pct: 15 },
-  { label: 'Admin & OpEx (deposit + 6-mo runway)', amount: '₹16.00L', pct: 15 },
+  { label: 'AI, compute, sensing & power', amount: '₹19.20L', pct: 17 },
+  { label: 'Admin & OpEx (deposit + 6-mo runway)', amount: '₹16.00L', pct: 14 },
 ];
 
 const fundingStages = [
@@ -52,7 +52,7 @@ export default function FinancialsPage() {
         <div className="relative max-w-4xl mx-auto">
           <div className="eyebrow mb-4">Financials & Investment</div>
           <h1 className="font-heading font-extrabold text-5xl md:text-6xl text-silver-100 mb-6 leading-tight">
-            ₹107.9L CapEx →<br />
+            ₹110.90L CapEx →<br />
             <span className="text-gradient">INR 174.60-232.80L Revenue</span>
           </h1>
           <p className="text-silver-300 text-xl leading-relaxed max-w-2xl">
@@ -89,7 +89,7 @@ export default function FinancialsPage() {
             {/* CapEx chart */}
             <div className="card p-7">
               <div className="font-mono text-[10px] text-teal-500 tracking-widest uppercase mb-1">Phase 1 Capital Allocation</div>
-              <h3 className="font-heading font-semibold text-silver-100 text-base mb-6">CapEx Breakdown (₹107.9 Lakhs Total)</h3>
+              <h3 className="font-heading font-semibold text-silver-100 text-base mb-6">CapEx Breakdown (₹110.90 Lakhs Total)</h3>
               <CapexChart />
             </div>
           </div>
@@ -117,9 +117,36 @@ export default function FinancialsPage() {
               ))}
               <div className="flex justify-between pt-4 border-t border-teal-500/15 font-heading font-bold text-base">
                 <span className="text-silver-100">Grand Total Launch Capital</span>
-                <span className="text-gradient">₹107.90 Lakhs</span>
+                <span className="text-gradient">₹110.90 Lakhs</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ PRICING TIERS ═══ */}
+      <section className="py-16 px-6 bg-navy-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="eyebrow mb-4">Revenue Model</div>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-silver-100 mb-3">
+            Pricing Tiers & <span className="text-gradient">Market Positioning</span>
+          </h2>
+          <p className="text-silver-400 text-sm mb-8 max-w-2xl leading-relaxed">
+            Revenue projections use ₹30,000/kg (conservative) and ₹40,000/kg (premium export) as the per-kg rate — both within the Premium A-Grade tier.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { grade: 'Low-Grade / Spent Waste', price: '₹5,000–₹10,000/kg', highlight: false, note: '' },
+              { grade: 'Standard Raw Grade', price: '₹18,000–₹25,000/kg', highlight: false, note: '' },
+              { grade: 'Premium A-Grade', price: '₹30,000–₹45,000/kg', highlight: true, note: 'Conservative model: ₹30K/kg' },
+              { grade: 'Ultra-High / Export Grade', price: '₹50,000–₹1,00,000/kg', highlight: false, note: 'Premium model: ₹40K/kg' },
+            ].map(({ grade, price, highlight, note }) => (
+              <div key={grade} className={`card p-6 ${highlight ? 'border-teal-500/40' : ''}`}>
+                <div className={`font-heading font-bold text-lg mb-1 ${highlight ? 'text-teal-400' : 'text-silver-200'}`}>{price}</div>
+                <div className="text-silver-400 text-sm mb-2">{grade}</div>
+                {note && <div className="font-mono text-xs text-teal-500">{note}</div>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -150,6 +177,7 @@ export default function FinancialsPage() {
                   { label: 'Steady-state monthly revenue', val: 'INR 18-24 Lakhs/month' },
                   { label: 'Phase 1 annual revenue', val: 'INR 174.60-232.80 Lakhs' },
                   { label: 'Pricing scenarios', val: 'Conservative and premium annual revenue cases' },
+                  { label: 'Asset recovery timeline', val: 'Conservative: ~10 months · Premium: within Year 1' },
                 ].map(({ label, val }) => (
                   <div key={label} className="flex justify-between gap-4 py-2 border-b border-white/5 text-sm">
                     <span className="text-silver-500">{label}</span>
@@ -192,6 +220,33 @@ export default function FinancialsPage() {
                       )}
                     </div>
                   ))}
+                </div>
+              </div>
+
+              {/* OPEX + Breakeven */}
+              <div className="card p-7">
+                <div className="font-mono text-[10px] text-silver-500 tracking-widest uppercase mb-5">Steady-State Monthly OPEX</div>
+                <div className="flex justify-between items-center mb-5">
+                  <span className="text-silver-400 text-sm">Total monthly outflow</span>
+                  <span className="font-heading font-bold text-teal-400 text-xl">₹6.92L/mo</span>
+                </div>
+                <div className="space-y-2.5 mb-5">
+                  {[
+                    { label: 'Operations (substrate, utilities, logistics)', val: '₹3.30L' },
+                    { label: 'Staffing (4 specialists)', val: '₹1.80L' },
+                    { label: 'Facility & software', val: '₹0.72L' },
+                    { label: 'Debt service (CGTMSE EMI)', val: '₹1.08L' },
+                  ].map(({ label, val }) => (
+                    <div key={label} className="flex justify-between gap-3 text-xs py-1 border-b border-white/4 last:border-0">
+                      <span className="text-silver-500">{label}</span>
+                      <span className="text-silver-300 font-mono flex-shrink-0">{val}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="pt-3 border-t border-teal-500/15 text-xs text-silver-400 leading-relaxed">
+                  Breakeven at just <span className="text-teal-400 font-semibold">23.1 kg/month</span> (conservative) —
+                  only <span className="text-teal-400 font-semibold">38%</span> of steady-state capacity.
+                  At premium pricing, breakeven drops to <span className="text-teal-400 font-semibold">17.3 kg/month</span>.
                 </div>
               </div>
 

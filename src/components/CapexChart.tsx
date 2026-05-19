@@ -37,7 +37,7 @@ export default function CapexChart() {
           'Admin & OpEx',
         ],
         datasets: [{
-          data: [20.10, 24.55, 9.70, 12.45, 8.90, 16.20, 16.00],
+          data: [20.10, 24.55, 9.70, 12.45, 8.90, 19.20, 16.00],
           backgroundColor: [
             'rgba(0,200,83,0.75)',
             'rgba(29,233,182,0.65)',
@@ -75,7 +75,7 @@ export default function CapexChart() {
             bodyColor: '#8ab4c8',
             callbacks: {
               label: ctx =>
-                ` ₹${ctx.raw}L (${((Number(ctx.raw) / 107.9) * 100).toFixed(1)}%)`,
+                ` ₹${ctx.raw}L (${((Number(ctx.raw) / 110.90) * 100).toFixed(1)}%)`,
             },
           },
         },

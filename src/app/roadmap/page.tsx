@@ -38,7 +38,7 @@ const phases = [
     active: false,
     title: 'Twin-Zone Commercial Facility',
     subtitle: '20,000 Jars · KINFRA 4,000 sq ft · Dual Zone',
-    desc: 'Full commercial-scale facility with two independent 10,000-jar zones offset 30 days apart, generating monthly cash flow from Month 3. Annual dry output is projected at 582 kg in Year 1 stabilization.',
+    desc: 'Full commercial-scale facility with two independent 10,000-jar zones offset 30 days apart, generating monthly cash flow from Month 3. Annual dry output is projected at 582 kg in Year 1 stabilization. Deployment is contingent on successful completion of Phase 0 biological validation.',
     targets: [
       'Conservative annual revenue: INR 174.60 Lakhs',
       'Premium annual revenue: INR 232.80 Lakhs',
@@ -47,7 +47,7 @@ const phases = [
       'FSSAI certified + first Master CoA generated',
     ],
     specs: [
-      { label: 'CapEx', val: '₹107.9 Lakhs' },
+      { label: 'CapEx', val: '₹110.90 Lakhs' },
       { label: 'Compute', val: 'Industrial edge AI' },
       { label: 'Climate', val: 'Dual-zone precision control' },
       { label: 'Team', val: '10 staff (24/7 operations)' },
@@ -64,14 +64,14 @@ const phases = [
     desc: 'Scale Metera AI to Lion\'s Mane, Reishi, and other high-value medicinal mushrooms. Prove platform adaptability across different biological profiles. Activate ML-driven full-system control for autonomous climate and production optimization.',
     targets: [
       'Retrain vision intelligence for new fungal phenotypes',
-      'Activate ML control for full-system autonomous optimization',
+      'Activate full ML control at 6-cycle / 60,000-jar scale threshold',
       'Expand B2B customer base to new product lines',
       'Demonstrate Metera AI platform versatility',
       'Increase annual revenue with diversified SKUs',
     ],
     specs: [
       { label: 'New Crops', val: 'Lion\'s Mane, Reishi, + others' },
-      { label: 'AI Milestone', val: 'Full-system ML control' },
+      { label: 'AI Milestone', val: 'Full ML control at 6-cycle / 60,000-jar threshold' },
       { label: 'AI Update', val: 'Vision model expansion' },
       { label: 'Market', val: 'Expanded nutraceutical B2B' },
     ],

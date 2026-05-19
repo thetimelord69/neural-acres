@@ -13,8 +13,9 @@ const techStack = [
     code: 'AI',
     title: 'AI & Computer Vision',
     items: [
-      { name: 'Crop Health Intelligence', detail: 'Computer vision evaluates crop state, growth quality, and contamination risk.' },
+      { name: 'Crop Health Intelligence', detail: 'Computer vision evaluates crop state, growth quality, and contamination risk across 11 agronomic audit points.' },
       { name: 'Edge Decision Layer', detail: 'Critical control decisions run locally inside the facility.' },
+      { name: 'Operations Advisory Layer', detail: 'AI-powered contextual guidance for operators across cultivation, maintenance, and compliance domains — accessible in natural language.' },
       { name: 'Phase 2 ML Control', detail: 'Machine learning expands from monitoring to full closed-loop facility control.' },
       { name: 'Adaptive Optimization', detail: 'Cycle data trains the system to reduce drift and improve repeatability.' },
     ],
@@ -23,9 +24,9 @@ const techStack = [
     code: 'IO',
     title: 'Sensing & Control',
     items: [
-      { name: 'Multi-Variable Sensing', detail: 'Environmental and visual inputs are monitored across sealed grow zones.' },
+      { name: 'Multi-Variable Sensing', detail: '200+ environmental sensors monitor sealed grow zones at 5-second intervals — temperature, humidity, CO₂, and more.' },
       { name: 'Industrial Control Layer', detail: 'Facility equipment is governed through hardened automation interfaces.' },
-      { name: 'Visual Monitoring', detail: 'Image streams support growth-stage and anomaly detection.' },
+      { name: 'Visual Monitoring', detail: '108 dedicated vision nodes deliver continuous image streams for growth-stage tracking and contamination detection.' },
       { name: 'Redundant Telemetry', detail: 'Sensor data is cross-checked before control actions are issued.' },
     ],
   },
@@ -155,6 +156,7 @@ export default function TechnologyPage() {
               <div className="space-y-4">
                 {[
                   { label: 'Phase 0 Role', val: 'Monitor + assist', desc: 'Validate sensing, vision, dashboard, and intervention logic' },
+                  { label: 'Phase 1 Role', val: 'Assisted control', desc: 'AI recommendations reviewed and approved by engineer before actuation' },
                   { label: 'Phase 2 Role', val: 'ML full control', desc: 'Closed-loop learning across climate, timing, and production actions' },
                   { label: 'Control Scope', val: 'Whole facility', desc: 'Climate, visual health, batch history, and operator escalation' },
                   { label: 'Disclosure Level', val: 'Investor-safe', desc: 'Capability proof without public replication details' },

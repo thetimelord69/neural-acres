@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const proofPoints = [
   { value: 'Under Construction', label: 'Phase 0 demo unit', tone: 'text-gold-400' },
   { value: 'INR 30-50L', label: 'Seed ask for 3.5-5.5% equity', tone: 'text-teal-400' },
-  { value: 'INR 107.9L', label: 'Phase 1 CapEx model', tone: 'text-cyan-400' },
+  { value: 'INR 110.90L', label: 'Phase 1 CapEx model', tone: 'text-cyan-400' },
   { value: 'INR 174.6-232.8L', label: 'Annual revenue target', tone: 'text-silver-100' },
 ];
 
@@ -143,8 +143,9 @@ export default function Home() {
             <span className="text-gradient">Running on Guesswork</span>
           </h2>
           <p className="text-silver-300 text-lg max-w-2xl mb-14 leading-relaxed">
-            Global demand for medicinal fungi is exploding — yet the entire supply chain remains
-            fragile, inconsistent, and trapped in the 20th century.
+            The global Cordyceps militaris market was valued at USD 1.45B–1.8B in 2025, growing at a
+            9.7–11.09% CAGR — yet the entire supply chain remains fragile, inconsistent, and trapped
+            in the 20th century.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -278,7 +279,7 @@ export default function Home() {
             Angel investment bridges to CGTMSE collateral-free loan (₹50–60L).
           </p>
           <p className="text-silver-400 text-base mb-10">
-            INR 107.9L Phase 1 CapEx with annual revenue scenarios of INR 174.6L (conservative)
+            INR 110.90L Phase 1 CapEx with annual revenue scenarios of INR 174.6L (conservative)
             to INR 232.8L (premium).
           </p>
           <div className="flex flex-wrap justify-center gap-4">
