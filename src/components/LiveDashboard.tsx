@@ -82,7 +82,7 @@ export default function LiveDashboard() {
       {/* Header */}
       <div className="flex items-center gap-2.5 px-5 py-3.5 bg-teal-500/6 border-b border-teal-500/12">
         <span className="w-2.5 h-2.5 rounded-full bg-teal-500 shadow-[0_0_8px_#1de9b6] live-dot flex-shrink-0" />
-        <span className="font-mono text-xs text-silver-300 flex-1">Metera AI · Build Dashboard</span>
+        <span className="font-mono text-xs text-silver-300 flex-1">Kryleos Atmos-OS · Build Dashboard</span>
         <span className="font-mono text-xs text-silver-500">{clockStr}</span>
       </div>
 

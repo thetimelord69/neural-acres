@@ -32,7 +32,7 @@ This generates a static export in the `out/` folder — upload it to any web hos
 | Route | Page |
 |---|---|
 | `/` | Home — hero, problem, solution teaser, investment CTA |
-| `/technology` | Metera OS deep-dive, tech stack, live dashboard |
+| `/technology` | Kryleos Atmos-OS deep-dive, tech stack, live dashboard |
 | `/roadmap` | All 5 phases with targets and specs |
 | `/financials` | Charts, CapEx breakdown, investment ask |
 | `/contact` | Inquiry form + next steps |

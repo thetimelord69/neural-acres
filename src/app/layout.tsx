@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     template: '%s | Neural Acres',
   },
   description:
-    'Not a farm. A machine. AI-governed autonomous cultivation of pharmaceutical-grade Cordyceps militaris powered by Metera AI.',
+    'Not a farm. A machine. AI-governed autonomous cultivation of pharmaceutical-grade Cordyceps militaris powered by Kryleos Atmos-OS.',
   keywords: [
-    'Neural Acres', 'Metera AI', 'Cordyceps', 'medicinal fungi', 'biotech investment',
+    'Neural Acres', 'Kryleos Atmos-OS', 'Cordyceps', 'medicinal fungi', 'biotech investment',
     'AI agriculture', 'pharmaceutical grade', 'India biotech', 'seed investment',
   ],
   openGraph: {

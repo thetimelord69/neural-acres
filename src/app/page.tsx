@@ -48,7 +48,7 @@ const problems = [
 const advantages = [
   { n: '01', title: 'First-Mover in India', desc: 'Zero automated Cordyceps facilities exist in India. Neural Acres establishes the category before competitors can replicate the IP.' },
   { n: '02', title: 'Regulatory Moat', desc: 'Immutable data logs + unidirectional facility flow fast-track GMP & ISO 22000 — a multi-year, multi-crore barrier for traditional competitors.' },
-  { n: '03', title: 'Proprietary Platform IP', desc: 'Metera AI is a reusable biological control platform. Future licensing to third-party growers creates a capital-light secondary revenue stream.' },
+  { n: '03', title: 'Proprietary Platform IP', desc: 'Kryleos Atmos-OS is a reusable biological control platform. Future licensing to third-party growers creates a capital-light secondary revenue stream.' },
 ];
 
 export default function Home() {
@@ -95,7 +95,7 @@ export default function Home() {
             Neural Acres builds sealed biological machines that cultivate pharmaceutical-grade{' '}
             <em className="text-teal-400 not-italic">Cordyceps militaris</em> with autonomous climate control,
             continuous vision audits, and certifiable output governed by{' '}
-            <strong className="text-teal-500">Metera AI</strong>.
+            <strong className="text-teal-500">Kryleos Atmos-OS</strong>.
           </p>
 
           {/* Investor proof points */}
@@ -127,7 +127,7 @@ export default function Home() {
               href="/technology"
               className="px-7 py-3.5 border border-teal-500/30 text-silver-100 font-semibold text-base rounded-xl hover:border-teal-500/60 hover:bg-teal-500/6 transition-all duration-200"
             >
-              Explore Metera AI ↓
+              Explore Kryleos Atmos-OS ↓
             </Link>
           </div>
 
@@ -167,7 +167,7 @@ export default function Home() {
             <div>
               <div className="eyebrow mb-4">The Solution</div>
               <h2 className="font-heading font-bold text-4xl md:text-5xl text-silver-100 mb-6 leading-tight">
-                Metera AI —<br />
+                Kryleos Atmos-OS —<br />
                 <span className="text-gradient">Biological Control Intelligence</span>
               </h2>
               <p className="text-silver-300 text-base leading-relaxed mb-6">
@@ -192,7 +192,7 @@ export default function Home() {
                 href="/technology"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-navy-950 font-bold rounded-xl shadow-teal-glow hover:bg-teal-400 transition-all duration-200"
               >
-                Deep Dive: Metera AI →
+                Deep Dive: Kryleos Atmos-OS →
               </Link>
             </div>
 
@@ -200,7 +200,7 @@ export default function Home() {
             <div className="card p-0 overflow-hidden border-teal-500/20 shadow-teal-glow">
               <div className="flex items-center gap-2.5 px-5 py-3.5 bg-teal-500/6 border-b border-teal-500/12">
                 <span className="w-2.5 h-2.5 rounded-full bg-teal-500 live-dot shadow-[0_0_8px_#1de9b6]" />
-                <span className="font-mono text-xs text-silver-300">Metera AI · Build Dashboard</span>
+                <span className="font-mono text-xs text-silver-300">Kryleos Atmos-OS · Build Dashboard</span>
                 <span className="ml-auto font-mono text-xs text-silver-500">Cycle Day 23/65</span>
               </div>
               <div className="p-5 space-y-4">

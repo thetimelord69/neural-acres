@@ -15,13 +15,13 @@ const phases = [
     active: true,
     title: 'Demo Unit',
     subtitle: '50×50cm Sealed Biosphere · 15 Jars',
-    desc: 'Under construction to prove the Metera AI concept end-to-end: microclimate governance, computer vision review, and an operator dashboard before Phase 1 capital deployment.',
+    desc: 'Under construction to prove the Kryleos Atmos-OS concept end-to-end: microclimate governance, computer vision review, and an operator dashboard before Phase 1 capital deployment.',
     targets: [
       'Fruiting rate ≥80% of jars',
       'Cordycepin content ≥10 mg/g (pharma-grade)',
       'Yield ≥5 g/jar dry weight',
       'Temperature stable ±0.2°C around 18°C',
-      'Metera AI dashboard prototype visible to investors',
+      'Kryleos Atmos-OS dashboard prototype visible to investors',
     ],
     specs: [
       { label: 'CapEx', val: '~₹25,000' },
@@ -61,12 +61,12 @@ const phases = [
     active: false,
     title: 'Botanical Expansion — Medicinal Fungi',
     subtitle: 'Lion\'s Mane · Reishi · Premium Mushrooms',
-    desc: 'Scale Metera AI to Lion\'s Mane, Reishi, and other high-value medicinal mushrooms. Prove platform adaptability across different biological profiles. Activate ML-driven full-system control for autonomous climate and production optimization.',
+    desc: 'Scale Kryleos Atmos-OS to Lion\'s Mane, Reishi, and other high-value medicinal mushrooms. Prove platform adaptability across different biological profiles. Activate ML-driven full-system control for autonomous climate and production optimization.',
     targets: [
       'Retrain vision intelligence for new fungal phenotypes',
       'Activate full ML control at 6-cycle / 60,000-jar scale threshold',
       'Expand B2B customer base to new product lines',
-      'Demonstrate Metera AI platform versatility',
+      'Demonstrate Kryleos Atmos-OS platform versatility',
       'Increase annual revenue with diversified SKUs',
     ],
     specs: [
@@ -84,19 +84,19 @@ const phases = [
     active: false,
     title: 'Complex Botanicals',
     subtitle: 'Saffron · Vanilla · High-Value Climate-Sensitive Crops',
-    desc: 'Expand Metera AI governance to Saffron, Vanilla, and other delicate climate-sensitive botanicals. Adapt vision intelligence for entirely new phenotypes and establish validated operating envelopes — proving Metera AI as a universal cultivation platform.',
+    desc: 'Expand Kryleos Atmos-OS governance to Saffron, Vanilla, and other delicate climate-sensitive botanicals. Adapt vision intelligence for entirely new phenotypes and establish validated operating envelopes — proving Kryleos Atmos-OS as a universal cultivation platform.',
     targets: [
       'Saffron cultivation with ≥28 mg/g safranal content',
       'New vision intelligence trained for botanical phenotypes',
       'Establish deterministic SOPs for non-fungal biology',
       'Organic (NPOP) certification for premium export pricing',
-      'Prove Metera AI universality across plant kingdoms',
+      'Prove Kryleos Atmos-OS universality across plant kingdoms',
     ],
     specs: [
       { label: 'Target Crops', val: 'Saffron, Vanilla, delicate botanicals' },
       { label: 'Platform Proof', val: 'Universal AI validation' },
       { label: 'Certification', val: 'NPOP Organic (target)' },
-      { label: 'IP Expansion', val: 'New SOP modules for Metera' },
+      { label: 'IP Expansion', val: 'New SOP modules for Kryleos Atmos-OS' },
     ],
   },
   {
@@ -130,18 +130,18 @@ const phases = [
     active: false,
     title: 'Aquaculture',
     subtitle: 'High-Value Species · SaaS Licensing · Universal AI',
-    desc: 'Adapt the Metera AI reasoning engine to high-value aquaculture. The same decision architecture; entirely new sensor modalities (pH, dissolved oxygen, salinity, ammonia). This phase proves Metera AI as a universal bio-manufacturing intelligence platform.',
+    desc: 'Adapt the Kryleos Atmos-OS reasoning engine to high-value aquaculture. The same decision architecture; entirely new sensor modalities (pH, dissolved oxygen, salinity, ammonia). This phase proves Kryleos Atmos-OS as a universal bio-manufacturing intelligence platform.',
     targets: [
-      'Adapt Metera AI to aquatic sensor modalities',
+      'Adapt Kryleos Atmos-OS to aquatic sensor modalities',
       'pH, dissolved oxygen, salinity, ammonia monitoring',
       'High-value aquaculture species cultivation',
       'SaaS licensing model for third-party operators',
-      'Global expansion of Metera AI platform',
+      'Global expansion of Kryleos Atmos-OS platform',
     ],
     specs: [
       { label: 'New Sensors', val: 'pH, DO, salinity, ammonia' },
       { label: 'Revenue Model', val: 'SaaS licensing + direct ops' },
-      { label: 'Core Engine', val: 'Same Metera AI reasoning engine' },
+      { label: 'Core Engine', val: 'Same Kryleos Atmos-OS reasoning engine' },
       { label: 'Vision', val: 'Universal bio-manufacturing AI' },
     ],
   },
@@ -164,7 +164,7 @@ export default function RoadmapPage() {
           </h1>
           <p className="text-silver-300 text-xl leading-relaxed max-w-2xl">
             Starting with <em className="text-teal-400 not-italic">Cordyceps militaris</em> and scaling
-            Metera AI across medicinal fungi, complex botanicals, vertical extraction, and aquaculture.
+            Kryleos Atmos-OS across medicinal fungi, complex botanicals, vertical extraction, and aquaculture.
           </p>
         </div>
       </section>
@@ -243,7 +243,7 @@ export default function RoadmapPage() {
           </h2>
           <p className="text-silver-400 text-base mb-8 leading-relaxed">
             Phase 0 demo unit is under construction. Angel investors who engage now can review
-            the build plan, validation milestones, and Metera AI architecture before capital deployment.
+            the build plan, validation milestones, and Kryleos Atmos-OS architecture before capital deployment.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/financials"

@@ -289,7 +289,7 @@ export default function FinancialsPage() {
               { time: 'Month 3', cert: 'First Master CoA', detail: 'Third-party potency validation for each commercial batch', color: 'text-cyan-400' },
               { time: 'Month 5', cert: 'First Export Pathway', detail: 'Export documentation, phytosanitary review, and buyer qualification.', color: 'text-cyan-400' },
               { time: 'Year 1', cert: 'GMP Fast-Track Application', detail: 'Schedule M / WHO-GMP — pharma buyer unlock, ₹1.5–2.5Cr', color: 'text-silver-400' },
-              { time: 'Year 2', cert: 'ISO 22000 Application', detail: 'Leverages 12+ months of controlled Metera AI batch records', color: 'text-silver-400' },
+              { time: 'Year 2', cert: 'ISO 22000 Application', detail: 'Leverages 12+ months of controlled Kryleos Atmos-OS batch records', color: 'text-silver-400' },
             ].map(({ time, cert, detail, color }) => (
               <div key={cert} className="card p-6 hover:border-teal-500/25 transition-all">
                 <div className="font-mono text-xs text-silver-500 tracking-wide mb-2">{time}</div>

@@ -28,7 +28,7 @@ export default function Footer() {
             </Link>
             <p className="text-silver-400 text-sm leading-relaxed">
               Intelligent Biospheres. Pharmaceutical-Grade Output.<br />
-              Powered by Metera AI v1.0.
+              Powered by Kryleos Atmos-OS v1.0.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-teal-500/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-silver-500">
           <span>© 2026 Neural Acres. All rights reserved.</span>
-          <span className="font-mono text-teal-500/60">Metera AI v1.0 · In Build · May 2026</span>
+          <span className="font-mono text-teal-500/60">Kryleos Atmos-OS v1.0 · In Build · May 2026</span>
         </div>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import LiveDashboard from '@/components/LiveDashboard';
 export const metadata: Metadata = {
   title: 'Technology',
   description:
-    'Metera AI is a biological control intelligence for autonomous pharmaceutical-grade medicinal fungi cultivation.',
+    'Kryleos Atmos-OS is a biological control intelligence for autonomous pharmaceutical-grade medicinal fungi cultivation.',
 };
 
 const techStack = [
@@ -36,7 +36,7 @@ const techStack = [
     items: [
       { name: 'Precision Microclimate', detail: 'Temperature, humidity, air exchange, and light are managed as one control system.' },
       { name: 'Independent Zones', detail: 'Production zones can be operated separately for resilience and staggered harvests.' },
-      { name: 'Automated Interventions', detail: 'Metera AI corrects drift before crop quality is affected.' },
+      { name: 'Automated Interventions', detail: 'Kryleos Atmos-OS corrects drift before crop quality is affected.' },
       { name: 'Phase 2 Autonomy', detail: 'ML models will coordinate climate equipment directly across full production cycles.' },
     ],
   },
@@ -62,10 +62,10 @@ const techStack = [
   },
   {
     code: 'IP',
-    title: 'Metera AI Core IP',
+    title: 'Kryleos Atmos-OS Core IP',
     items: [
       { name: 'Private Control Engine', detail: 'The core control library is proprietary and not exposed publicly.' },
-      { name: 'Biological State Model', detail: 'Metera AI converts sensor and vision data into cultivation state decisions.' },
+      { name: 'Biological State Model', detail: 'Kryleos Atmos-OS converts sensor and vision data into cultivation state decisions.' },
       { name: 'Decision Governance', detail: 'Control actions are constrained by validated biological operating envelopes.' },
       { name: 'Licensable Platform', detail: 'The same engine can later govern other fungi, botanicals, and aquaculture systems.' },
     ],
@@ -82,7 +82,7 @@ const hiwSteps = [
   {
     n: '02',
     title: 'Think',
-    desc: 'Metera AI interprets sensor drift, visual health signals, and batch context to decide when intervention is needed.',
+    desc: 'Kryleos Atmos-OS interprets sensor drift, visual health signals, and batch context to decide when intervention is needed.',
     tags: ['Edge AI', 'Anomaly Review', 'Crop State', 'Decision Layer'],
   },
   {
@@ -104,7 +104,7 @@ export default function TechnologyPage() {
         <div className="relative max-w-4xl mx-auto">
           <div className="eyebrow mb-4">Technology</div>
           <h1 className="font-heading font-extrabold text-5xl md:text-6xl text-silver-100 mb-6 leading-tight">
-            Metera AI —<br />
+            Kryleos Atmos-OS —<br />
             <span className="text-gradient">Biological Control Intelligence</span>
           </h1>
           <p className="text-silver-300 text-xl leading-relaxed max-w-2xl">
@@ -146,12 +146,12 @@ export default function TechnologyPage() {
             <div>
               <div className="eyebrow mb-4">System Preview</div>
               <h2 className="font-heading font-bold text-4xl text-silver-100 mb-6 leading-tight">
-                Metera AI in <span className="text-gradient">Real Time</span>
+                Kryleos Atmos-OS in <span className="text-gradient">Real Time</span>
               </h2>
               <p className="text-silver-300 text-base leading-relaxed mb-8">
-                The dashboard preview shows the operator-facing layer of Metera AI without exposing
+                The dashboard preview shows the operator-facing layer of Kryleos Atmos-OS without exposing
                 the underlying control stack. Phase 0 focuses on monitored autonomy; Phase 2 extends
-                Metera AI into machine-learning control of the full cultivation system.
+                Kryleos Atmos-OS into machine-learning control of the full cultivation system.
               </p>
               <div className="space-y-4">
                 {[
@@ -183,7 +183,7 @@ export default function TechnologyPage() {
             Built for <span className="text-gradient">Industrial Scale</span>
           </h2>
           <p className="text-silver-400 text-base max-w-2xl mb-14 leading-relaxed">
-            This public overview explains what Metera AI does without exposing the vendor stack,
+            This public overview explains what Kryleos Atmos-OS does without exposing the vendor stack,
             sensor bill of materials, protocols, thresholds, or private control logic.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
@@ -207,7 +207,7 @@ export default function TechnologyPage() {
             <span className="font-mono text-gold-400 text-sm flex-shrink-0">IP</span>
             <div className="text-sm text-silver-300 leading-relaxed">
               <strong className="text-silver-100">Proprietary IP Protected:</strong>{' '}
-              Metera AI is maintained as private control IP. Public materials describe capability,
+              Kryleos Atmos-OS is maintained as private control IP. Public materials describe capability,
               not source structure, hardware recipes, thresholds, or replication-level implementation details.
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function TechnologyPage() {
             See the Full <span className="text-gradient">Roadmap & Vision</span>
           </h2>
           <p className="text-silver-400 text-base mb-8">
-            Metera AI starts with Cordyceps and scales to fungi, botanicals, and aquaculture —
+            Kryleos Atmos-OS starts with Cordyceps and scales to fungi, botanicals, and aquaculture —
             a universal bio-manufacturing platform.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

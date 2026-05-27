@@ -10,7 +10,7 @@ const nextSteps = [
   {
     n: '1',
     title: 'Initial Call (30 min)',
-    desc: 'Walk through Metera AI architecture, Phase 1 financial model, and competitive landscape with the founder.',
+    desc: 'Walk through Kryleos Atmos-OS architecture, Phase 1 financial model, and competitive landscape with the founder.',
   },
   {
     n: '2',
@@ -20,7 +20,7 @@ const nextSteps = [
   {
     n: '3',
     title: 'Due Diligence Package',
-    desc: 'Full BOM, CapEx model, regulatory timeline, compliance roadmap, and Metera AI Core Library architecture documentation.',
+    desc: 'Full BOM, CapEx model, regulatory timeline, compliance roadmap, and Kryleos Atmos-OS Core Library architecture documentation.',
   },
   {
     n: '4',
@@ -46,7 +46,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-silver-300 text-xl leading-relaxed max-w-xl mx-auto">
             Neural Acres is in active Phase 0 development. The demo unit is under construction,
-            with investor diligence focused on the build plan, hardware architecture, and Metera AI validation milestones.
+            with investor diligence focused on the build plan, hardware architecture, and Kryleos Atmos-OS validation milestones.
           </p>
         </div>
       </section>
